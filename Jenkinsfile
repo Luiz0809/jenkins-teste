@@ -1,22 +1,27 @@
 pipeline{
     agent any
     stages{
-        stage('passo 1'){
+        stage('Instalando Dependências'){
             steps {
-                echo 'testando primeira parte 1'
-                echo 'ta dificil'
+                echo 'Indo até o diretório frontend'
+                sh 'cd frontend'
+
+                echo 'Instalando dependências'
+                sh 'yarn install'
             }
         }
 
-        stage('passo 2'){
+        stage('Build'){
             steps {
-                echo 'testando segunda parte 2'
+                echo 'Buildando projeto'
+                sh 'yarn build'
             }
         }
         
-        stage('passo 3'){
+        stage('Run'){
             steps {
-                echo 'testando primeira parte 3'
+                echo 'Rodando projeto'
+                sh 'yarn start'
             }
         }
 
