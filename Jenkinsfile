@@ -6,15 +6,10 @@ pipeline{
         stage('Curl'){
             steps {
                 echo 'Baixando versão 14 do node'
-                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
+                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash | source ~/.bashrc'
             }
         }
 
-        stage('Reiniciando terminal'){
-            steps {
-                echo 'Baixando versão 14 do node'
-                sh 'source ~/.bashrc'
-            }
         }
 
         stage('Atualizando Node'){
