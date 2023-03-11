@@ -1,26 +1,16 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Instalando Dependências'){
+    stages {
+        stage('Build') {
             steps {
-                echo 'Instalando dependências do projeto'
-                sh 'yarn install'
+                sh 'npm install'
+                sh 'npm run build'
             }
         }
-
-        stage('Build'){
+        stage('Deploy') {
             steps {
-                echo 'Buildando projeto'
-                sh 'next build'
+                sh 'scp -r build ubuntu@3.228.107.215:/var/www/html'
             }
         }
-        
-        stage('Run'){
-            steps {
-                echo 'Rodando projeto'
-                sh 'yarn dev'
-            }
-        }
-
     }
 }
