@@ -1,12 +1,26 @@
 pipeline{
+    
 
     agent any
     stages{
+        stage('Curl'){
+            steps {
+                echo 'Baixando versão 14 do node'
+                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
+            }
+        }
+
+        stage('Reiniciando terminal'){
+            steps {
+                echo 'Baixando versão 14 do node'
+                sh 'source ~/.bashrc'
+            }
+        }
+
         stage('Atualizando Node'){
             steps {
                 echo 'Baixando versão 14 do node'
-                sh 'sudo apt-get install -y nodejs'
-                sh 'sudo apt-get install -y npm'
+                sh 'nvm install 14'
             }
         }
 
