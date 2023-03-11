@@ -3,19 +3,19 @@ pipeline{
     stages{
         stage('passo 1'){
             steps {
-                echo 'testando primeira parte'
+                echo 'testando primeira parte 1'
             }
         }
 
         stage('passo 2'){
             steps {
-                echo 'testando segunda parte'
+                echo 'testando segunda parte 2'
             }
         }
         
         stage('passo 3'){
             steps {
-                echo 'testando primeira parte'
+                echo 'testando primeira parte 3'
             }
         }
 
