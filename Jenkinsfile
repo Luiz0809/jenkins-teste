@@ -5,7 +5,8 @@ pipeline{
         stage('Atualizando Node'){
             steps {
                 echo 'Baixando versão 14 do node'
-                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash; nvm install 14'
+                sh 'sudo apt-get install -y nodejs'
+                sh 'sudo apt-get install -y npm'
             }
         }
 
