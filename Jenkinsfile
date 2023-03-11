@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Instalando Dependências'){
             steps {
-                echo 'Instalando dependências'
+                echo 'Instalando dependências do projeto'
                 sh 'yarn install'
             }
         }
