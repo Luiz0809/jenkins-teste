@@ -8,6 +8,8 @@ pipeline{
 
                 echo 'Instalando dependências'
                 sh 'yarn install'
+
+                sh 'ls'
             }
         }
 
