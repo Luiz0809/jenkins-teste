@@ -4,10 +4,10 @@ pipeline{
         stage('Instalando Dependências'){
             steps {
                 echo 'Indo até o diretório frontend'
-                sh 'cd frontend'
+                sh 'cd /frontend'
 
                 echo 'Instalando dependências'
-                sh 'yarn install'
+                sh 'yarn'
 
                 sh 'ls'
             }
@@ -15,6 +15,9 @@ pipeline{
 
         stage('Build'){
             steps {
+                echo 'Indo até o diretório frontend'
+                sh 'cd /frontend'
+
                 echo 'Buildando projeto'
                 sh 'yarn build'
             }
@@ -22,6 +25,9 @@ pipeline{
         
         stage('Run'){
             steps {
+                echo 'Indo até o diretório frontend'
+                sh 'cd /frontend'
+                
                 echo 'Rodando projeto'
                 sh 'yarn start'
             }
