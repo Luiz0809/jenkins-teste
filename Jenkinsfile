@@ -6,17 +6,16 @@ pipeline{
         stage('Curl'){
             steps {
                 echo 'Baixando versão 14 do node'
-                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
-                sh 'chmod 777 instalador.sh'
-                sh './instalador.sh'
+                sh 'curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -'
+                sh 'sudo apt-get install -y nodejs'
             }
         }
         
 
-        stage('Atualizando Node'){
+        stage('Atualizando NPM'){
             steps {
                 echo 'Baixando versão 14 do node'
-                sh 'nvm install 14'
+                sh 'sudo apt-get install -y npm'
             }
         }
 
