@@ -6,8 +6,9 @@ pipeline{
         stage('Curl'){
             steps {
                 echo 'Baixando versão 14 do node'
+                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
                 sh 'chmod 777 instalador.sh'
-                sh ' ./instalador.sh'
+                sh './instalador.sh'
             }
         }
         
