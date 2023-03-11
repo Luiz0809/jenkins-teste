@@ -1,0 +1,27 @@
+.button {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: $black-transparent 0px 3px 8px;
+  background-color: $white;
+  color: $red-900;
+  border-color: transparent;
+  font-family: Poppins;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 700ms all ease;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 0.5rem;
+
+ 
+}
+
+.button:hover {
+  transform: scale(1.1);
+
+}
+
+
+

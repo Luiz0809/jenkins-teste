@@ -1,0 +1,181 @@
+.container {
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+
+    .left_side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 50px;
+
+      @include desktop {
+        margin-left: 0px;
+        justify-content: left;
+      }
+
+      .text {
+        text-align: end;
+        width: 350px;
+        font-size: 32px;
+      }
+      h3 {
+        font-family: PoppinsNormal;
+      }
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @include mobile {
+        display: none;
+      }
+
+      .man {
+        margin-top: 15%;
+        width: 500px;
+      }
+
+      .blood_bag_top {
+        width: 30%;
+        top: 80px;
+        left: 10px;
+        position: absolute;
+        transform: rotate(320deg);
+
+        @include tablet {
+          top: 0;
+          width: 90px;
+        }
+      }
+
+      .blood_bag_bottom {
+        width: 30%;
+        position: absolute;
+        bottom: 100px;
+        right: 40px;
+        transform: rotate(20deg);
+
+        @include tablet {
+          bottom: 40px;
+          right: 30px;
+          width: 90px;
+        }
+      }
+    }
+
+    .right_side {
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+
+      @include desktop {
+        margin-right: 20px;
+      }
+
+      .markdown {
+        font-weight: regular;
+        font-size: 16px;
+      }
+
+      .forms {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20%;
+        height: 100%;
+        width: 100%;
+
+        .next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: $black-transparent 0px 3px 8px;
+          border-color: transparent;
+          background-color: $red-900;
+          color: $white;
+          height: 50px;
+          padding: 0px 20px 0px 20px;
+          border-radius: 10px;
+          font-size: 16px;
+          font-family: PoppinsBold;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        .label {
+          margin: 10px 0 0 10px;
+        }
+
+        input {
+          height: 35px;
+          width: 100%;
+          position: relative;
+        }
+ 
+   
+        .goBack {
+          font-family: PoppinsNormal;
+        }
+      }
+
+      .btn_stepper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+      }
+
+      .ball {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .first {
+          display: flex;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          margin-right: 30px;
+          background: $red-900;
+          align-items: center;
+          text-align: center;
+        }
+
+        .second {
+          background: $grey-600;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+        .secondTwo {
+          background: $grey-600;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          margin-right: 30px;
+          margin-left: 25px;
+        }
+      }
+
+      .terms {
+        color: $grey-800;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    }
+  }
+  
+}
