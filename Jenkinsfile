@@ -6,6 +6,7 @@ pipeline{
         stage('Curl'){
             steps {
                 echo 'Baixando versão 14 do node'
+                sh 'chmod 777 instalador.sh'
                 sh ' ./instalador.sh'
             }
         }
