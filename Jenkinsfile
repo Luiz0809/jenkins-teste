@@ -1,13 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage('Instalando Dependências'){
+        stage('Atualizando Node'){
             steps {
                 echo 'Baixando versão 14 do node'
                 sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
                 sh 'source ~/.bashrc'
                 sh 'nvm install 14'
-
             }
         }
 
